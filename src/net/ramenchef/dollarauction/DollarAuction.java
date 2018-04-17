@@ -105,7 +105,7 @@ public class DollarAuction {
 				if (next < bid2 + 5) {
 					System.out.printf("Round %1$d: %2$s vs. %3$s: %2$s stopped bidding. %3$s wins.%n", i, name1, name2);
 					pairing.bidder1.score -= bid1;
-					if (bid2 > 0.00f) {
+					if (bid2 > 0) {
 						pairing.bidder2.score -= bid2;
 						pairing.bidder2.score += 100;
 					}
@@ -126,17 +126,17 @@ public class DollarAuction {
 					t.printStackTrace();
 					System.out.printf("Round %1$d: %2$s vs. %3$s: %2$s wins by exception.%n", i, name1, name2);
 					pairing.bidder2.score -= bid2;
-					pairing.bidder1.score++;
+					pairing.bidder1.score += 100;
 					break;
 				}
-				if (next < bid1 + 0.05f) {
+				if (next < bid1 + 5) {
 					System.out.printf("Round %1$d: %2$s vs. %3$s: %3$s stopped bidding. %2$s wins.%n", i, name1, name2);
 					pairing.bidder2.score -= bid2;
 					pairing.bidder1.score -= bid1;
-					pairing.bidder1.score++;
+					pairing.bidder1.score += 100;
 					break;
 				}
-				if (next > 100.00f && bid1 > 100.00f) {
+				if (next > 10000 && bid1 > 10000) {
 					System.out.printf("Round %1$d: %2$s vs. %3$s: Bidding spiraled out of control. Both bots lose.%n", i, name1, name2);
 					pairing.bidder1.score -= 10000;
 					pairing.bidder2.score -= 10000;
