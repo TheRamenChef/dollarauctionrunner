@@ -1,6 +1,6 @@
 import net.ramenchef.dollarauction.DollarBidder;
 
-public class Analyst extends DollarBidder {
+public class AnalystBot extends DollarBidder {
 	private DollarBidder enemy;
 	
 	@Override
