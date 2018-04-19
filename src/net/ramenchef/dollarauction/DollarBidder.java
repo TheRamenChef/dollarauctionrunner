@@ -1,7 +1,7 @@
 package net.ramenchef.dollarauction;
 
 public abstract class DollarBidder {
-	int score;
+	long score;
 	
 	/**
 	 * (Optional) Perform whatever resets you need to prepare for the next auction.
