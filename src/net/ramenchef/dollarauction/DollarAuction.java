@@ -89,7 +89,7 @@ public class DollarAuction {
 				t.printStackTrace();
 			}
 			
-			int bid1 = 0, bid2 = 0;
+			long bid1 = 0, bid2 = 0;
 			while (true) {
 				int next;
 				try {
