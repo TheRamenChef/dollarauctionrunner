@@ -148,7 +148,7 @@ public class DollarAuction {
 		
 		System.out.println();
 		
-		Arrays.sort(bidders, Comparator.comparingDouble(bidder -> -bidder.score));
+		Arrays.sort(bidders, Comparator.comparingLong(bidder -> -bidder.score));
 		System.out.println("Scoreboard:");
 		for (int i = 0; i < bidders.length; i++)
 			System.out.printf("%1$s: $%2$.2f%n", bidders[i].getClass().getName(), bidders[i].score * 0.01);
