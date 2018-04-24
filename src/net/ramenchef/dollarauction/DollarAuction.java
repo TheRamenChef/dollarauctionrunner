@@ -93,7 +93,7 @@ public class DollarAuction {
 			while (true) {
 				int next;
 				try {
-					next = pairing.bidder1.nextBid(bid2);
+					next = pairing.bidder1.nextBid((int)bid2);
 				} catch (Throwable t) {
 					System.err.printf("Bot %1$s threw an exception while determining its bid.%n", name1);
 					t.printStackTrace();
@@ -120,7 +120,7 @@ public class DollarAuction {
 				bid1 = next;
 				
 				try {
-					next = pairing.bidder2.nextBid(bid1);
+					next = pairing.bidder2.nextBid((int)bid1);
 				} catch (Throwable t) {
 					System.err.printf("Bot %1$s threw an exception while determining its bid.%n", name2);
 					t.printStackTrace();
